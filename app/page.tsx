@@ -3,6 +3,9 @@ import { groq } from "next-sanity";
 import Image from "next/image";
 import BlogList from "./components/BlogList";
 
+// const query = groq`
+//   *[_type=='post'] | order(_createdAt desc)
+// `;
 const query = groq`
   *[_type=='post']{
     ...,
