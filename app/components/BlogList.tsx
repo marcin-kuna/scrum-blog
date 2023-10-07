@@ -14,9 +14,9 @@ function BlogList({ posts }: Props) {
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
             <div key={post._id} className="flex flex-col group cursor-pointer">
-              <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
+              <div className="relative w-full h-80 drop-shadow-xl ">
                 <Image
-                  className="object-cover object-left lg:object-center"
+                  className="object-cover object-center mx-auto group-hover:scale-105 transition-transform duration-300 ease-out"
                   alt={post.mainImage.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

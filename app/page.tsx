@@ -20,4 +20,4 @@ export default async function Home() {
   );
 }
 
-export const revalidate = 20;
+export const revalidate = 60;
