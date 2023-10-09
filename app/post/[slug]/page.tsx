@@ -2,6 +2,8 @@ import { client } from "@/sanity/lib/client";
 import { groq } from "next-sanity";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
+import { RichTextComponents } from "@/app/components/RichTextComponents";
 
 type Props = {
   params: {
@@ -76,7 +78,10 @@ async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
+
+      <PortableText value={post.body} components={RichTextComponents} />
     </article>
   );
 }
 export default Post;
+export const revalidate = 60;
