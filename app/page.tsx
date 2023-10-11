@@ -10,6 +10,8 @@ const query = groq`
   } 
 `;
 
+export const revalidate = 30;
+
 export default async function Home() {
   const posts = await client.fetch(query);
 
@@ -19,5 +21,3 @@ export default async function Home() {
     </div>
   );
 }
-
-export const revalidate = 60;
