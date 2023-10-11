@@ -10,7 +10,7 @@ const query = groq`
   } 
 `;
 
-export const revalidate = 30;
+export const revalidate = 20;
 
 export default async function Home() {
   const posts = await client.fetch(query);
