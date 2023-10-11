@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-export const revalidate = 20;
+export const revalidate = 30;
 
 export async function generateStaticParams() {
   const query = groq`
