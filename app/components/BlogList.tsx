@@ -9,14 +9,17 @@ type Props = {
 function BlogList({ posts }: Props) {
   return (
     <div>
-      <hr className="border-[#F7AB0A] mb-10" />
+      <hr className="border-[var(--color-yellow)] mb-10" />
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
-            <div key={post._id} className="flex flex-col group cursor-pointer">
-              <div className="relative w-full h-80 drop-shadow-xl ">
+            <div
+              key={post._id}
+              className="flex flex-col group cursor-pointer overflow-hidden"
+            >
+              <div className="relative w-full h-80 drop-shadow-xl overflow-hidden">
                 <Image
-                  className="object-cover object-center mx-auto group-hover:scale-105 transition-transform duration-300 ease-out"
+                  className="object-cover object-center mx-auto hover:scale-110 transition ease delay-150"
                   alt={post.mainImage.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -37,7 +40,7 @@ function BlogList({ posts }: Props) {
                     {post.categories.map((category) => (
                       <div
                         key={post._id}
-                        className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
+                        className="bg-[#ffb703] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
                       >
                         <p>{category.title}</p>
                       </div>
@@ -47,7 +50,7 @@ function BlogList({ posts }: Props) {
               </div>
               <div className="mt-5 flex-1">
                 <p className="underline text-lg font-bold">{post.title}</p>
-                <p className="line-clamp-2 text-gray-500">{post.description}</p>
+                <p className="line-clamp-2 font-serif">{post.description}</p>
               </div>
 
               <p className="mt-5 font-bold flex items-center group-hover:underline">

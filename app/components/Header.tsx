@@ -14,12 +14,12 @@ function Header() {
             alt="logo"
           />
         </Link>
-        <h1>AGILE WAY</h1>
+        <h1 className="text-3xl text-[var(--color-blue)]">Zwinka</h1>
       </div>
       <div>
         <Link
           href="https://marcin-kuna.pages.dev/"
-          className="px-5 py-3 text-sm md:text-base bg-gray-900 text-[#F7AB0A] flex items-center rounded-full text-center"
+          className="px-5 py-3 text-sm md:text-base bg-[var(--color-navy)] text-[var(--color-yellow)] flex items-center rounded-full text-center"
         >
           Check My Developer Portfolio
         </Link>

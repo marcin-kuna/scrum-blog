@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --timberwolf: #d6d6d6ff;
+--aureolin: #ffee32ff;
+--jonquil: #ffd100ff;
+--eerie-black: #202020ff;
+--jet: #333533ff; */
+
+:root {
+  --color-navy: #023047ff;
+  --color-blue: #219ebcff;
+  --color-skyblue: #8ecae6ff;
+  --color-yellow: #ffb703ff;
+  --color-orange: #fb8500ff;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

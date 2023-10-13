@@ -1,10 +1,21 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
+import { Montserrat, PT_Serif } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin-ext"],
+  variable: "--font-montserrat",
+});
+
+const ptserif = PT_Serif({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin-ext"],
+  display: "swap",
+  variable: "--font-ptserif",
+});
 
 export const metadata: Metadata = {
   title: "Scrum Blog",
@@ -17,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${ptserif.variable}`}>
       <body className="max-w-7xl mx-auto">
         <Header />
         <Banner />
