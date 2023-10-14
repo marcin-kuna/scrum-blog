@@ -53,7 +53,7 @@ async function Post({ params: { slug } }: Props) {
               src={urlForImage(post.mainImage).url()}
             />
           </div>
-          <section className="p-5 bg-[#F7AB0A] w-full">
+          <section className="p-5 bg-[var(--color-yellow)] w-full">
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
               <div>
                 <h1 className="text-4xl font-extrabold">{post.title}</h1>
@@ -85,7 +85,7 @@ async function Post({ params: { slug } }: Props) {
               <div className="flex items-center justify-end mt-auto space-x-2">
                 {post.categories.map((category) => (
                   <p
-                    className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                    className="bg-[var(--color-navy)] text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
                     key={category._id}
                   >
                     {category.title}
