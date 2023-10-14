@@ -21,7 +21,8 @@ function Header() {
           href="https://marcin-kuna.pages.dev/"
           className="px-5 py-3 text-sm md:text-base bg-[var(--color-navy)] text-[var(--color-yellow)] flex items-center rounded-full text-center"
         >
-          Check My Developer Portfolio
+          Check My <span className="hidden md:block mx-1"> Developer</span>{" "}
+          Portfolio
         </Link>
       </div>
     </header>

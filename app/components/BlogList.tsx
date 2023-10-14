@@ -9,8 +9,8 @@ type Props = {
 function BlogList({ posts }: Props) {
   return (
     <div>
-      <hr className="border-[var(--color-yellow)] mb-10" />
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
+      <hr className="border-[var(--color-yellow)] mb-10 mx-10" />
+      <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-10">
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
             <div
@@ -19,7 +19,7 @@ function BlogList({ posts }: Props) {
             >
               <div className="relative w-full h-80 drop-shadow-xl overflow-hidden">
                 <Image
-                  className="object-cover object-center mx-auto hover:scale-110 transition ease delay-150"
+                  className="object-cover object-center mx-auto group-hover:scale-110 transition ease delay-100"
                   alt={post.mainImage.alt}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -27,8 +27,10 @@ function BlogList({ posts }: Props) {
                 />
                 <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
                   <div>
-                    <p className="font-bold">{post.title}</p>
-                    <p>
+                    <p className="font-bold text-[var(--color-yellow)]">
+                      {post.title}
+                    </p>
+                    <p className="text-[var(--color-skyblue)]">
                       {new Date(post._createdAt).toLocaleDateString("pl-PL", {
                         day: "numeric",
                         month: "long",
@@ -40,7 +42,7 @@ function BlogList({ posts }: Props) {
                     {post.categories.map((category) => (
                       <div
                         key={post._id}
-                        className="bg-[#ffb703] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
+                        className="bg-[var(--color-yellow)] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
                       >
                         <p>{category.title}</p>
                       </div>
@@ -49,16 +51,17 @@ function BlogList({ posts }: Props) {
                 </div>
               </div>
               <div className="mt-5 flex-1">
-                <p className="underline text-lg font-bold">{post.title}</p>
-                <p className="line-clamp-2 font-serif">{post.description}</p>
+                {/* <p className="underline text-lg font-bold">{post.title}</p> */}
+                <p className="line-clamp-2">{post.description}</p>
               </div>
 
-              <p className="mt-5 font-bold flex items-center group-hover:underline">
+              <p className="mt-2 font-bold flex items-center group-hover:underline decoration-[var(--color-yellow)]">
                 Read Post
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  fill="currentColor"
+                  fill="var(--color-yellow)"
+                  // fill="currentColor"
                   className="ml-2 h-4 w-4"
                 >
                   <path
@@ -72,6 +75,7 @@ function BlogList({ posts }: Props) {
           </ClientSideRoute>
         ))}
       </div>
+      <hr className="border-[var(--color-yellow)] mx-10" />
     </div>
   );
 }

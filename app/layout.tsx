@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import { Montserrat, PT_Serif } from "next/font/google";
+import Footer from "./components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin-ext"],
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Header />
         <Banner />
         {children}
+        <Footer />
       </body>
     </html>
   );
