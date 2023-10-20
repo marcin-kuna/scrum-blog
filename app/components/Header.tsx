@@ -12,14 +12,29 @@ function Header() {
           className="rounded-full"
           alt="logo"
         />
-        <div className="relative flex flex-col">
+        {/* <div className="relative flex flex-col">
           <h1 className="text-6xl text-[var(--color-blue)]">
-            S<span className="text-xl absolute top-2">CRUM</span>
+            S<span className="text-xl absolute top-2">ATURDAY</span>
+            <span className="text-xl absolute top-7">CRUM</span>
           </h1>
           <hr className="border-[#f4f4f4] w-full h-2 border-4 absolute z-10 top-7" />
+          <hr className="border-[var(--color-blue)] border-1 absolute z-20 top-8 w-[150px] h-2" />
+          <span className="italic text-[var(--color-yellow)] absolute top-10 left-[102px]">
+            LIVE
+          </span>
+        </div> */}
+        <div className="relative">
+          <span className="text-6xl text-[var(--color-blue)]">S</span>
+          <span className="text-6xl text-[var(--color-blue)]">S</span>
+          <span className="text-6xl text-[var(--color-yellow)]">L</span>
+          <hr className="border-[#f4f4f4] w-full h-2 border-4 absolute z-10 top-7" />
           <hr className="border-[var(--color-blue)] border-1 absolute z-20 top-8 w-[100px] h-2" />
-          {/* <p className="font-serif italic text-[var(--color-blue)]">blog</p> */}
         </div>
+        {/* <div className="flex flex-col h-16">
+          <span className="text-xl text-[var(--color-blue)]">SATURDAY</span>
+          <span className="text-xl text-[var(--color-blue)]">SCRUM</span>
+          <span className="text-xl text-[var(--color-blue)]">LIVE</span>
+        </div> */}
       </Link>
       <div>
         <Link
