@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-montserrat)"],
         serif: ["var(--font-ptserif)"],
+        alfa: ["var(--font-alfa)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

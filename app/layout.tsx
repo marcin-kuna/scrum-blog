@@ -2,8 +2,14 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
-import { Montserrat, PT_Serif } from "next/font/google";
+import { Montserrat, PT_Serif, Alfa_Slab_One } from "next/font/google";
 import Footer from "./components/Footer";
+
+const alfa = Alfa_Slab_One({
+  weight: ["400"],
+  subsets: ["latin-ext"],
+  variable: "--font-alfa",
+});
 
 const montserrat = Montserrat({
   subsets: ["latin-ext"],
@@ -29,7 +35,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${ptserif.variable}`}>
+    <html
+      lang="en"
+      className={`${montserrat.variable} ${ptserif.variable} ${alfa.variable}`}
+    >
       <body className="max-w-7xl mx-auto">
         <Header />
         <Banner />
