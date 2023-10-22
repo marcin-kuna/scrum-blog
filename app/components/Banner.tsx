@@ -2,8 +2,8 @@ function Banner() {
   return (
     <div className="flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 py-5 mb-10">
       <div>
-        <h1 className="text-7xl">Welcome to</h1>
-        <h1 className="text-7xl text-[var(--clr-primary)]">
+        <h1 className="text-5xl md:text-7xl">Welcome to</h1>
+        <h1 className="text-5xl md:text-7xl text-[var(--clr-primary)]">
           Saturday Scrum
           <span className="text-[var(--clr-secondary)]"> Live!</span>
         </h1>
