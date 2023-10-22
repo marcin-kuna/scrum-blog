@@ -35,7 +35,7 @@ function BlogListItem({ post }: Props) {
             {post.categories.map((category) => (
               <div
                 key={post._id}
-                className="bg-[var(--clr-yellow)] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
+                className="bg-[var(--clr-yellow)] text-center text-black px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold"
               >
                 <p>{category.title}</p>
               </div>
