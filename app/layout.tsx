@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${ptserif.variable} ${alfa.variable}`}
     >
-      <body className="w-screen max-w-7xl mx-auto overflow-hidden">
+      <body className="w-screen max-w-7xl mx-auto">
         <Header />
         <Banner />
         {children}
