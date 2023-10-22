@@ -21,8 +21,8 @@ function BlogListItem({ post }: Props) {
         />
         <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
           <div>
-            <p className="font-bold text-[var(--color-yellow)]">{post.title}</p>
-            <p className="text-[var(--color-skyblue)]">
+            <p className="font-bold text-[var(--clr-primary)]">{post.title}</p>
+            <p className="text-[var(--clr-yellow)]">
               {new Date(post._createdAt).toLocaleDateString("pl-PL", {
                 day: "numeric",
                 month: "long",
@@ -34,7 +34,7 @@ function BlogListItem({ post }: Props) {
             {post.categories.map((category) => (
               <div
                 key={post._id}
-                className="bg-[#ffd166ff] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
+                className="bg-[var(--clr-yellow)] text-center text-black px-3 py-1 rounded-full text-sm font-semibold"
               >
                 <p>{category.title}</p>
               </div>
@@ -46,12 +46,12 @@ function BlogListItem({ post }: Props) {
         <p className="line-clamp-2">{post.description}</p>
       </div>
 
-      <p className="mt-2 font-bold flex items-center group-hover:underline decoration-[var(--color-yellow)]">
+      <p className="mt-2 font-bold flex items-center group-hover:underline decoration-[var(--clr-primary)]">
         Read Post
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          fill="var(--color-yellow)"
+          fill="var(--clr-primary)"
           className="ml-2 h-4 w-4"
         >
           <path

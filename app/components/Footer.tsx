@@ -3,11 +3,13 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="flex items-center justify-between font-bold mt-10 mb-10 mx-10">
-      <div>&copy; {new Date().getFullYear()} All rights reserved</div>
+      <div>
+        &copy; Marcin Kuna {new Date().getFullYear()} / All rights reserved
+      </div>
       <div className="flex items-center space-x-2">
         <Link href="https://www.linkedin.com/in/marcin-kuna/">
           <svg
-            className="w-6 h-6 hover:fill-[var(--color-blue)] transition-all delay-100 ease-in"
+            className="w-6 h-6 hover:fill-[var(--clr-primary)] transition-all delay-100 ease-in"
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
             viewBox="0 0 448 512"
@@ -18,7 +20,7 @@ function Footer() {
         </Link>
         <Link href="https://github.com/marcin-kuna">
           <svg
-            className="w-6 h-6 hover:fill-[var(--color-blue)] transition-all delay-100 ease-in"
+            className="w-6 h-6 hover:fill-[var(--clr-primary)] transition-all delay-100 ease-in"
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
             viewBox="0 0 448 512"
@@ -29,7 +31,7 @@ function Footer() {
         </Link>
         <Link href="https://marcin-kuna.pages.dev/">
           <svg
-            className="w-6 h-6 hover:fill-[var(--color-blue)] transition-all delay-100 ease-in"
+            className="w-6 h-6 hover:fill-[var(--clr-primary)] transition-all delay-100 ease-in"
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
             viewBox="0 0 512 512"

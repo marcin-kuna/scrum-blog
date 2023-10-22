@@ -41,8 +41,8 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <article className="px-10 pb-28">
-      <section className="space-y-2 border border-[#F7AB0A] text-white">
+    <article className="px-10 pb-28 font-serif">
+      <section className="space-y-2 font-sans">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
           <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
             <Image
@@ -53,10 +53,12 @@ async function Post({ params: { slug } }: Props) {
               src={urlForImage(post.mainImage).url()}
             />
           </div>
-          <section className="p-5 bg-[var(--color-yellow)] w-full">
+          <section className="p-5 bg-[var(--clr-yellow)] w-full">
             <div className="flex flex-col md:flex-row justify-between gap-y-5">
               <div>
-                <h1 className="text-4xl font-extrabold">{post.title}</h1>
+                <h1 className="text-4xl font-extrabold text-[var(--clr-primary)]">
+                  {post.title}
+                </h1>
                 <p>
                   {new Date(post._createdAt).toLocaleDateString("pl-PL", {
                     day: "numeric",
@@ -74,7 +76,9 @@ async function Post({ params: { slug } }: Props) {
                   width={40}
                 />
                 <div>
-                  <h3 className="text-lg font-bold">{post.author.name}</h3>
+                  <h3 className="text-lg font-bold  text-[var(--clr-dark)]">
+                    {post.author.name}
+                  </h3>
                   <div>{/* TODO: Author BIO ?? */}</div>
                 </div>
               </div>
@@ -85,7 +89,7 @@ async function Post({ params: { slug } }: Props) {
               <div className="flex items-center justify-end mt-auto space-x-2">
                 {post.categories.map((category) => (
                   <p
-                    className="bg-[var(--color-navy)] text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                    className="bg-[var(--clr-dark)] text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
                     key={category._id}
                   >
                     {category.title}

@@ -15,10 +15,18 @@ function Banner() {
           </span>
         </h2>
       </div>
-      <p className="mt-5 md:mt-2 text-[var(--clr-primary)] max-w-sm">
-        <span className="text-[var(--clr-yellow)]">Scrum</span> concepts |
-        values | mastery | in practice | certification & More!
-      </p>
+      <div className="mt-5 md:mt-2 text-[var(--clr-primary)] max-w-sm flex flex-col md:items-end">
+        <div>
+          <span className="text-[var(--clr-secondary)]">Scrum</span> | concepts
+          | pillars |
+        </div>
+        <div>values | mastery | toolbox |</div>
+        <div>in practice | certification | events |</div>
+        <div>
+          team | artifacts{" "}
+          <span className="text-[var(--clr-secondary)]">& More!</span>
+        </div>
+      </div>
     </div>
   );
 }
