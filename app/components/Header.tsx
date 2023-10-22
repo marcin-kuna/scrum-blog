@@ -29,7 +29,7 @@ function Header() {
       <div>
         <Link
           href="https://marcin-kuna.pages.dev/"
-          className="px-5 py-3 text-sm md:text-base bg-[var(--clr-dark)] text-[var(--clr-yellow)] flex items-center rounded-full text-center hover:bg-[var(--clr-yellow)] hover:text-[var(--clr-dark)] transition-all delay-100 ease-in"
+          className="px-3 py-2 md:px-5 md:py-3 text-sm md:text-base bg-[var(--clr-dark)] text-[var(--clr-yellow)] flex items-center rounded-full text-center hover:bg-[var(--clr-yellow)] hover:text-[var(--clr-dark)] transition-all delay-100 ease-in"
         >
           Check My <span className="hidden md:block mx-1"> Developer</span>{" "}
           Portfolio

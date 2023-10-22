@@ -42,7 +42,7 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <article className="px-10 pb-28 font-serif">
-      <section className="space-y-2 font-sans">
+      <section className="space-y-2 font-sans mb-10">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
           <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
             <Image
@@ -68,18 +68,19 @@ async function Post({ params: { slug } }: Props) {
                 </p>
               </div>
               <div className="flex items-center space-x-2">
-                <Image
-                  className="rounded-full"
-                  alt={post.author.name}
-                  src={urlForImage(post.author.image).url()}
-                  height={40}
-                  width={40}
-                />
+                <div className="rounded-full w-10 h-10 relative">
+                  <Image
+                    className="rounded-full"
+                    alt={post.author.name}
+                    src={urlForImage(post.author.image).url()}
+                    fill
+                    sizes="40px"
+                  />
+                </div>
                 <div>
                   <h3 className="text-lg font-bold  text-[var(--clr-dark)]">
                     {post.author.name}
                   </h3>
-                  <div>{/* TODO: Author BIO ?? */}</div>
                 </div>
               </div>
             </div>

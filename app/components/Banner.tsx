@@ -20,8 +20,8 @@ function Banner() {
           <span className="text-[var(--clr-secondary)]">Scrum</span> | concepts
           | pillars |
         </div>
-        <div>values | mastery | toolbox |</div>
-        <div>in practice | certification | events |</div>
+        <div>values | in practice | toolbox |</div>
+        <div>mastery | certification | events |</div>
         <div>
           team | artifacts{" "}
           <span className="text-[var(--clr-secondary)]">& More!</span>

@@ -18,6 +18,7 @@ function BlogListItem({ post }: Props) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src={urlForImage(post.mainImage).url()}
+          priority
         />
         <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
           <div>
