@@ -23,7 +23,7 @@ function BlogListItem({ post }: Props) {
         <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
           <div>
             <p className="font-bold text-[var(--clr-primary)]">{post.title}</p>
-            <p className="text-[var(--clr-yellow)]">
+            <p className="text-[var(--clr-yellow)] text-xs md:text-base">
               {new Date(post._createdAt).toLocaleDateString("pl-PL", {
                 day: "numeric",
                 month: "long",
